@@ -1,5 +1,9 @@
-import React from \"react\";
-import \"./Navbar.css\";
+import React from react
+import ./Navbar.css
 export default function Navbar(){
-  return (<nav className=\"navbar\"><div className=\"brand\">Pool Service</div></nav>);
+  return (
+    <header className="navbar">
+      <div className="brand">Pool Service Landing</div>
+    </header>
+  )
 }
