@@ -1,12 +1,11 @@
-import React from 'react';
-import './Footer.css';
-
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+import React from "react";
+import "./Footer.css";
+export default function Footer(){
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {currentYear} Pool Service. All rights reserved.</p>
+        <p>&copy; {year} Pool Service. All rights reserved.</p>
       </div>
     </footer>
   );
