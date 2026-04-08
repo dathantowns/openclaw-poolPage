@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "playfair";
+  src:
+    local("Playfair Display"),
+    local("PlayfairDisplay-Regular"),
+    url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "playfair";
+  src:
+    local("Playfair Display Italic"),
+    local("PlayfairDisplay-Italic"),
+    url("./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf")
+      format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}

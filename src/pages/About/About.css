@@ -1,0 +1,37 @@
+.about {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "playfair";
+  color: #0151b6;
+}
+
+.about__title {
+  font-size: 2rem;
+  margin: 0 5vw 1vh;
+}
+
+.about__info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about_pic {
+  height: 100vh;
+  width: 40vw;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+}
+
+.about__text {
+  width: 50vw;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-right: 5vw;
+}
