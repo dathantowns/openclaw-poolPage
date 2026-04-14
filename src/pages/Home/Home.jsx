@@ -3,7 +3,7 @@ import homeVid from "../../assets/pool_vid.mp4";
 
 export default function Home() {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <video
         src={homeVid}
         className="home__vid"

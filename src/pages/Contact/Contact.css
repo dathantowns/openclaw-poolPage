@@ -1,0 +1,12 @@
+.contact {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0151b6 0%, #3293fb 50%, #0151b6 100%);
+  font-family: "playfair";
+  color: white;
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}

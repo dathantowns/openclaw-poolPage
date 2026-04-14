@@ -4,7 +4,9 @@ import headerLogo from "../../assets/monclova_logo01.png";
 export default function Header() {
   return (
     <header className="header">
-      <img src={headerLogo} alt="logo" className="header__logo" />
+      <a href="#home" className="header__logo-link">
+        <img src={headerLogo} alt="logo" className="header__logo" />
+      </a>
       <nav className="header__nav">
         <ul className="header__nav-list">
           <li className="header__nav-item">
