@@ -1,5 +1,9 @@
-# Contact Us Section Task
+# Contact Form Implementation Plan
 
 ## Steps:
 
-- [x] 1. Create `src/pages/Contact/Contact.jsx` with JSX structure (section id="contact", form + info).\n- [x] 2. Create `src/pages/Contact/Contact.css` with styles matching theme (BEM, full viewport, flex, Playfair).\n- [x] 3. Edit `src/components/Main/Main.jsx`: Add import and render `<Contact />`.\n- [ ] 4. Test: Check dev server, scroll/form styling.\n- [ ] 5. Complete task.
+- [x] 1. Confirm plan with user (client-side form only, no npm test).
+- [x] 2. Edit src/pages/Contact/Contact.jsx to add full form with useState, handleSubmit, all required fields (first/last name, phone, service dropdown with exact options, message textarea, submit button).
+- [ ] 3. Add basic CSS classes if needed (inline or suggest Contact.css updates).
+- [ ] 4. Verify form functionality (user can test manually).
+- [ ] 5. Mark complete and attempt_completion.

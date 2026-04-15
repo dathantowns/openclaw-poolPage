@@ -2,11 +2,158 @@
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #0151b6 0%, #3293fb 50%, #0151b6 100%);
   font-family: "playfair";
   color: white;
   padding: 5vh 5vw;
   box-sizing: border-box;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title {
+  font-size: 3rem;
+  margin: 13vh 0 0;
+}
+
+.contact__subtitle {
+  font-size: 1.5rem;
+  margin: 0 0 2vh;
+}
+
+.contact__form {
+  height: 70vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 2.5vh 10vw 2.5vh 0;
+  border-radius: 20px;
+}
+
+.contact__field {
+  width: 40vw;
+  margin: 2.5vh 0 2.5vh auto;
+  display: flex;
+  align-items: center;
+}
+
+.contact__label {
+  margin-right: auto;
+}
+
+.contact__input {
+  width: 27vw;
+  height: 4vh;
+  padding: 1vh 0 1vh 1vw;
+  border: 1px solid #0151b6;
+  border-radius: 5px;
+  font-family: "playfair";
+  color: #0151b6;
+}
+
+.contact__input::placeholder {
+  color: #7db4f8;
+  font-family: "playfair";
+  font-size: 1rem;
+}
+
+.contact__input:focus {
+  border: 2px solid #0151b6;
+  outline: none;
+}
+
+.contact__select {
+  width: 20vw;
+  height: 6vh;
+  padding: 1vh 0 1vh 1vw;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #0151b6;
+  border-color: #0151b6;
+  outline: none;
+  border-radius: 5px;
+  font-family: "playfair";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact__select:focus {
+  border-color: #0151b6;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 28vw;
+  cursor: pointer;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding-right: 40px; /* space for arrow */
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #0151b6;
+}
+
+.contact__textarea {
+  width: 27vw;
+  border-radius: 5px;
+  border: 1px solid #0151b6;
+  padding: 1vh 0 1vh 1vw;
+  font-family: "playfair";
+  color: #0151b6;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.contact__textarea:focus {
+  outline: none;
+  border: 2px solid #0151b6;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact__textarea::placeholder {
+  font-family: "playfair";
+  font-size: 1rem;
+  color: #7db4f8;
+}
+
+.contact__submit-btn {
+  width: 20vw;
+  height: 40vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "playfair";
+  font-size: 1rem;
+  color: #0151b6;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__submit-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 1.1rem;
 }
