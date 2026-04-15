@@ -17,8 +17,9 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (
       !formData.firstName ||
       !formData.lastName ||
@@ -28,15 +29,30 @@ export default function Contact() {
       alert("Please fill in all required fields.");
       return;
     }
-    console.log("Form submitted:", formData);
-    alert("Thank you! Your message has been sent. We'll get back to you soon.");
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+
+    try {
+      const res = await fetch("https://mpsr.vercel.app//api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error();
+
+      alert("Message sent!");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    } catch (err) {
+      alert("Something went wrong.");
+    }
   };
 
   return (

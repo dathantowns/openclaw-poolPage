@@ -1,6 +1,16 @@
 export default async function handler(req, res) {
-  // CORS (important since your frontend may be on Google Cloud)
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const allowedOrigins = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://yourdomain.com", // production later
+  ];
+
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -15,28 +25,11 @@ export default async function handler(req, res) {
   try {
     const { firstName, lastName, phone, service, message } = req.body;
 
-    if (!firstName || !lastName || !phone || !service) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-
     await fetch(process.env.DISCORD_WEBHOOK_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        embeds: [
-          {
-            title: "📩 New Lead",
-            color: 5814783,
-            fields: [
-              { name: "Name", value: `${firstName} ${lastName}` },
-              { name: "Phone", value: phone },
-              { name: "Service", value: service },
-              { name: "Message", value: message || "N/A" },
-            ],
-          },
-        ],
+        content: `New lead: ${firstName} ${lastName} (${phone})`,
       }),
     });
 
