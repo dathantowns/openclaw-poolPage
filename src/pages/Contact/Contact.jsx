@@ -60,8 +60,12 @@ export default function Contact() {
       <div className="contact__container">
         <h2 className="contact__title">Get In Touch</h2>
         <p className="contact__subtitle">
-          Ready to schedule service or have questions? Fill out the form below.
+          Ready to schedule service or have questions? Fill out the form below
+          or CALL NOW!
         </p>
+        <a href="tel:+16616334953" className="contact__number">
+          <button className="contact__call-btn"> 📞 (661) 932-0646</button>
+        </a>
         <form className="contact__form" onSubmit={handleSubmit}>
           <div className="contact__field-group">
             <div className="contact__field">

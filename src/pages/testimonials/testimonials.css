@@ -1,0 +1,65 @@
+.testi {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  padding: 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "playfair";
+}
+
+.testi__spacer {
+  width: 100vw;
+  height: 15vh;
+  background: linear-gradient(to top, #0151b6 0%, #3293fb 100%);
+}
+
+.testi__title-cont {
+  width: 100vw;
+  height: max-content;
+  background-color: #0151b6;
+  color: white;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.testi__title {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.testi__text {
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.testi__name {
+  color: #0151b6;
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 2vh;
+}
+
+.testi__message {
+  margin: 0 0 2vh;
+  font-size: 3rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+}

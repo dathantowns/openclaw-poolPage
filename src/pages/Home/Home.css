@@ -13,25 +13,32 @@
   top: -320px;
   width: 100vw;
   height: 200vh;
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   z-index: -2;
+  object-fit: cover;
 }
 
 .home__title {
   margin: 28vh 0 3vh;
   font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .home__subtitle {
   font-size: 2rem;
   font-style: italic;
   margin-bottom: 13vh;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.home__contact-link {
+  display: block;
 }
 
 .home__estimate-btn {
   height: 20vh;
   width: 40vw;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(1, 81, 182, 0.2);
   border: none;
   border-radius: 20px;
   font-family: "playfair";
@@ -42,5 +49,70 @@
 }
 
 .home__estimate-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(1, 81, 182, 0.6);
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .home__title {
+    margin: 25vh 0 2.5vh;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .home__subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 10vh;
+    width: 80vw;
+    text-align: center;
+  }
+
+  .home__estimate-btn {
+    height: 80px;
+    width: min(350px, 80vw);
+    font-size: 1.6rem;
+  }
+
+  .home__vid {
+    top: -280px;
+    height: 190vh;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .home {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home__title {
+    width: 80vw;
+    margin: 18vh 0 2vh;
+    font-size: 1.8rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 10vh;
+    width: 80vw;
+  }
+
+  .home__estimate-btn {
+    height: 60px;
+    width: min(280px, 90vw);
+    font-size: 1.2rem;
+    border-radius: 15px;
+  }
+
+  .home__vid {
+    position: fixed;
+    top: -200px;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+    transform-origin: center;
+    z-index: -2;
+    object-fit: cover;
+  }
 }

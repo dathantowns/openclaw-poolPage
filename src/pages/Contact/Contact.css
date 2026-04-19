@@ -18,7 +18,7 @@
 
 .contact__title {
   font-size: 3rem;
-  margin: 13vh 0 0;
+  margin: 13vh 0 1vh;
 }
 
 .contact__subtitle {
@@ -26,14 +26,37 @@
   margin: 0 0 2vh;
 }
 
+.contact__number {
+  text-decoration: none;
+  font-family: "playfair";
+  color: white;
+  margin-bottom: 2vh;
+}
+
+.contact__call-btn {
+  width: 25vw;
+  height: 10vh;
+  background-color: rgba(249, 249, 251, 0.2);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  font-family: serif;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__call-btn:hover {
+  background-color: rgba(2, 19, 82, 0.9);
+}
+
 .contact__form {
   height: 70vh;
   width: 50vw;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 2.5vh 10vw 2.5vh 0;
   border-radius: 20px;
@@ -156,4 +179,16 @@
 .contact__submit-btn:hover {
   background-color: rgba(255, 255, 255, 1);
   font-size: 1.1rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
 }
