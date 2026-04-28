@@ -1,7 +1,13 @@
+.brandColors {
+  color: #86d1d9;
+  color: #fc9844;
+  color: #064a5b;
+}
+
 .header {
   width: 100vw;
   height: 13vh;
-  background-color: black;
+  background-color: white;
   opacity: 70%;
   transition: all 0.5s ease-in-out;
   display: flex;
@@ -15,19 +21,44 @@
 }
 
 .header:hover {
-  background-color: black;
-  opacity: 90%;
+  background-color: white;
+  opacity: 100%;
 }
 
 .header__logo-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.header__logo-text-cont {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 150px;
+  top: 20px;
+}
+
+.header__logo-text_top {
+  margin: 0;
+  color: #064a5b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__logo-text_bottom {
+  margin: 0;
+  color: #fc9844;
 }
 
 .header__logo {
-  width: 40px;
-  height: auto;
-  max-width: 10vw;
-  margin-left: 0.5rem;
+  width: 150px;
+  height: 40px;
+  /* max-width: 10vw; */
+  margin-left: 0.2rem;
+  margin-top: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -76,13 +107,13 @@
 
 .header__nav-link {
   text-decoration: none;
-  color: lightgray;
+  color: #064a5b;
   font-size: 1rem;
   transition: all 0.7s ease;
 }
 
 .header__nav-link:hover {
-  color: #007bff;
+  color: #86d1d9;
 }
 
 /* Mobile Menu Open State */
@@ -112,6 +143,11 @@
 @media (min-width: 751px) and (max-width: 1024px) {
   .header__logo {
     width: 13vw;
+    height: auto;
+  }
+
+  .header__logo-text-cont {
+    position: static;
   }
 
   .header__nav-list {
@@ -136,14 +172,12 @@
 
   .header__logo {
     width: 13vw;
-    height: 13vw;
+    height: auto;
     margin-left: 1vw;
   }
 
-  .header__logo:hover {
-    width: 14vw;
-    height: 14vw;
-    transform: none;
+  .header__logo-text-cont {
+    position: static;
   }
 
   .header__nav-list {
@@ -168,9 +202,14 @@
   }
 
   .header__logo {
-    width: 30vw;
+    width: 20vw;
     max-width: 30vw;
+    height: auto;
     margin-left: 0.25rem;
+  }
+
+  .header__logo-text-cont {
+    position: static;
   }
 
   .header__hamburger {

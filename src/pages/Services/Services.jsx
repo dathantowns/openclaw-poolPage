@@ -24,9 +24,9 @@ export default function Services() {
         "Turn a green, unusable pool back into a clean, swimmable condition. Our treatment targets algae at the source and restores clear, healthy water fast.",
     },
     {
-      title: "Pool Tile Cleaning",
+      title: "System Leak Detection and Repair",
       description:
-        "Restore the clean, polished look of your pool with detailed tile cleaning. We remove calcium buildup and stains to bring back a smooth, fresh finish.",
+        "Advanced leak detection and precision repairs to keep your pool performing at its best. We identify even the smallest issues and provide long-lasting solutions you can trust.",
     },
     {
       title: "Equipment Installations",
@@ -60,6 +60,7 @@ export default function Services() {
           />
         ))}
       </div>
+      <div className="services__price">Starting at $130 /month</div>
     </section>
   );
 }

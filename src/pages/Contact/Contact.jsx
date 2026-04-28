@@ -134,7 +134,9 @@ export default function Contact() {
                 <option value="Filter Cleaning">Filter Cleaning</option>
                 <option value="Acid/Chlorine Bath">Acid/Chlorine Bath</option>
                 <option value="Green Pool Makeover">Green Pool Makeover</option>
-                <option value="Pool Tile Cleaning">Pool Tile Cleaning</option>
+                <option value="System Leak Dectection And Repair">
+                  System Leak Detection And Repair
+                </option>
                 <option value="Equipment Installation">
                   Equipment Installation
                 </option>

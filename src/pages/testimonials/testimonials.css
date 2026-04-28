@@ -3,7 +3,7 @@
   width: 100vw;
   background-color: white;
   padding: 0;
-  color: black;
+  color: #064a5b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,13 +13,13 @@
 .testi__spacer {
   width: 100vw;
   height: 15vh;
-  background: linear-gradient(to top, #0151b6 0%, #3293fb 100%);
+  background: linear-gradient(to top, #064a5b 0%, #86d1d9 100%);
 }
 
 .testi__title-cont {
   width: 100vw;
   height: max-content;
-  background-color: #0151b6;
+  background-color: #064a5b;
   color: white;
   padding: 2vh 5vw;
   display: flex;
@@ -41,15 +41,15 @@
 }
 
 .testi__name {
-  color: #0151b6;
+  color: #fc9844;
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2vh;
 }
 
 .testi__message {
   margin: 0 0 2vh;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* Desktop Styles */
@@ -62,4 +62,21 @@
 
 /* Mobile styles */
 @media (max-width: 480px) {
+  .testi__title {
+    margin: 2vh 15vw;
+    font-size: 2.5rem;
+  }
+
+  .testi__text {
+    margin: 15vh auto 5vh;
+    width: 80vw;
+  }
+
+  .testi__name {
+    font-size: 1.2rem;
+  }
+
+  .testi__message {
+    font-size: 1.5rem;
+  }
 }

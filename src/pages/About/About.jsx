@@ -1,11 +1,58 @@
+import { useEffect, useRef } from "react";
 import "./About.css";
-import guyPic from "../../assets/pool_guy.jpg";
+import guyPic from "../../assets/aboutPic.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function About() {
+  const sectionRef = useRef(null);
+  const textRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        textRef.current,
+        { x: -150, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
+          },
+        },
+      );
+
+      gsap.fromTo(
+        imageRef.current,
+        { x: 150, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
+          },
+        },
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="about" id="about">
+    <section ref={sectionRef} className="about" id="about">
       <div className="about__info">
-        <div className="about__titles">
+        <div ref={textRef} className="about__titles">
           <h2 className="about__title">Elevating pool care standards.</h2>
           <h3 className="about__subtitle">
             About Monclova's Pool Service And Repairs
@@ -29,8 +76,14 @@ export default function About() {
           </p>
         </div>
 
-        <img src={guyPic} alt="" className="about_pic" />
+        <img ref={imageRef} src={guyPic} alt="" className="about_pic" />
       </div>
+      <div className="about__divider-top"></div>
+      <div className="about__divider-top_middle"></div>
+      <div className="about__divider-top_bottom"></div>
+      <div className="about__divider-bottom_top"></div>
+      <div className="about__divider-bottom_middle"></div>
+      <div className="about__divider-bottom_bottom"></div>
     </section>
   );
 }

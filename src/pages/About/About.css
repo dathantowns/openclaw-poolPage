@@ -1,10 +1,10 @@
 .about {
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   font-family: "playfair";
-  color: #0151b6;
+  color: #064a5b;
 }
 
 .about__titles {
@@ -16,11 +16,13 @@
 .about__title {
   font-size: 3rem;
   font-style: italic;
+  color: #fc9844;
 }
 
 .about__subtitle {
   font-size: 1.5rem;
   margin-bottom: 5vh;
+  color: #86d1d9;
 }
 
 .about__info {
@@ -28,8 +30,8 @@
 }
 
 .about_pic {
-  height: 100vh;
-  width: 40vw;
+  height: 105vh;
+  width: 42vw;
 }
 
 .about__text {
@@ -39,22 +41,25 @@
   line-height: 1.5;
 }
 
+.about__divider {
+  display: none;
+}
+
 /* Desktop Styles */
 @media (min-width: 1025px) {
 }
 
 /* Tablet Styles */
 @media (min-width: 481px) and (max-width: 1024px) {
-}
-
-/* Mobile styles */
-@media (max-width: 480px) {
   .about {
     justify-content: center;
+    height: 190vh;
   }
 
   .about__titles {
-    margin-top: 13vh;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
+    position: static;
   }
 
   .about_pic {
@@ -66,9 +71,69 @@
     z-index: 0;
   }
 
+  .about__divider-top {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 210vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #fc9844;
+  }
+
+  .about__divider-top_middle {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 212vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #064a5b;
+  }
+
+  .about__divider-top_bottom {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 214vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #86d1d9;
+  }
+
+  .about__divider-bottom_bottom {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 290vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #fc9844;
+  }
+
+  .about__divider-bottom_middle {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 288vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #064a5b;
+  }
+
+  .about__divider-bottom_top {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 286vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #86d1d9;
+  }
+
   .about__subtitle {
     width: 70vw;
-    margin-bottom: 2vh;
+    color: white;
   }
 
   .about__text {
@@ -78,6 +143,105 @@
     background-color: rgba(255, 255, 255, 0.6);
     padding: 2vh 2vh 0 0;
     border-radius: 20px;
+    margin-top: 50vh;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .about {
+    justify-content: center;
+    height: 190vh;
+  }
+
+  .about__titles {
+    margin-top: 40vh;
+    margin-bottom: 10vh;
+    position: static;
+  }
+
+  .about_pic {
+    position: absolute;
+    top: 125vh;
+    left: 0;
+    width: 100vw;
+    height: 70vh;
+    z-index: 0;
+  }
+
+  .about__divider-top {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 210vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #fc9844;
+  }
+
+  .about__divider-top_middle {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 212vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #064a5b;
+  }
+
+  .about__divider-top_bottom {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 214vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #86d1d9;
+  }
+
+  .about__divider-bottom_bottom {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 290vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #fc9844;
+  }
+
+  .about__divider-bottom_middle {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 288vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #064a5b;
+  }
+
+  .about__divider-bottom_top {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 286vh;
+    width: 100vw;
+    height: 2vh;
+    background-color: #86d1d9;
+  }
+
+  .about__subtitle {
+    width: 70vw;
+    color: white;
+  }
+
+  .about__text {
+    width: 80vw;
+    font-size: 1rem;
+    line-height: 4vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2vh 2vh 0 0;
+    border-radius: 20px;
+    margin-top: 47vh;
   }
 }
 
@@ -110,7 +274,7 @@
   .about__text {
     width: 80vw;
     font-size: 1rem;
-    line-height: 2.2vh;
+    line-height: 1;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 2vh 2vh;
     border-radius: 20px;
